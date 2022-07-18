@@ -1,3 +1,9 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+$fonts: (
+  lexend-deca: "Lexend Deca",
+  big-shoulders-display: "Big Shoulders Display",
+);

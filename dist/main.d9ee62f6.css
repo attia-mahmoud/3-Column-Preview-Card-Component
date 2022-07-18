@@ -1,28 +1,33 @@
-/* --------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"); /* --------------------- */
 /* Root */
 /* --------------------- */
 :root {
-  --fs-100: 0.7rem;
-  --fs-200: 0.8rem;
-  --fs-300: 0.9rem;
-  --fs-400: 1rem;
-  --fs-500: 1.125rem;
-  --fs-600: 1.25rem;
-  --fs-700: 1.5rem;
-  --fs-800: 1.75rem;
-  --fs-900: 2rem;
+  --clr-primary-bright-orange: hsl(31deg, 77%, 52%);
+  --clr-primary-dark-cyan: hsl(184deg, 100%, 22%);
+  --clr-primary-very-dark-cyan: hsl(179deg, 100%, 13%);
+  --clr-neutral-transparent-white: hsla(0deg, 0%, 100%, 0.75);
+  --clr-neutral-very-light-gray: hsl(0deg, 0%, 95%);
+  --fs-100: 0.65625rem;
+  --fs-200: 0.75rem;
+  --fs-300: 0.84375rem;
+  --fs-400: 0.9375rem;
+  --fs-500: 1.0546875rem;
+  --fs-600: 1.171875rem;
+  --fs-700: 1.40625rem;
+  --fs-800: 1.640625rem;
+  --fs-900: 1.875rem;
 }
 @media only screen and (min-width: 992px) {
   :root {
-    --fs-100: 0.7rem;
-    --fs-200: 0.8rem;
-    --fs-300: 0.9rem;
-    --fs-400: 1rem;
-    --fs-500: 1.125rem;
-    --fs-600: 1.25rem;
-    --fs-700: 1.5rem;
-    --fs-800: 1.75rem;
-    --fs-900: 2rem;
+    --fs-100: 0.65625rem;
+    --fs-200: 0.75rem;
+    --fs-300: 0.84375rem;
+    --fs-400: 0.9375rem;
+    --fs-500: 1.0546875rem;
+    --fs-600: 1.171875rem;
+    --fs-700: 1.40625rem;
+    --fs-800: 1.640625rem;
+    --fs-900: 1.875rem;
   }
 }
 
@@ -217,8 +222,68 @@ body {
   font-weight: 900;
 }
 
+.ff-lexend-deca {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.ff-big-shoulders-display {
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+.text-primary-bright-orange {
+  color: hsl(31deg, 77%, 52%);
+}
+
+.bg-primary-bright-orange {
+  color: hsl(31deg, 77%, 52%);
+}
+
+.text-primary-dark-cyan {
+  color: hsl(184deg, 100%, 22%);
+}
+
+.bg-primary-dark-cyan {
+  color: hsl(184deg, 100%, 22%);
+}
+
+.text-primary-very-dark-cyan {
+  color: hsl(179deg, 100%, 13%);
+}
+
+.bg-primary-very-dark-cyan {
+  color: hsl(179deg, 100%, 13%);
+}
+
+.text-neutral-transparent-white {
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+
+.bg-neutral-transparent-white {
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+
+.text-neutral-very-light-gray {
+  color: hsl(0deg, 0%, 95%);
+}
+
+.bg-neutral-very-light-gray {
+  color: hsl(0deg, 0%, 95%);
+}
+
 .d-block {
   display: block;
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.center_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=/main.d9ee62f6.css.map */
