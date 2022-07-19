@@ -1,0 +1,19 @@
+@use "../abstracts/breakpoints" as *;
+@use "../utilities/flow" as *;
+
+main {
+  margin-block: 6rem;
+
+  &:first-child {
+    border-radius: 10px;
+  }
+  &:last-child {
+    border-bottom: 10px;
+  }
+
+  max-width: 100%;
+
+  @include mq(large) {
+    @include flex(0rem, row);
+  }
+}

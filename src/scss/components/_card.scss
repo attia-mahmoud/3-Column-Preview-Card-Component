@@ -1,0 +1,31 @@
+@use "../utilities/flow" as *;
+@use "../abstracts/breakpoints" as *;
+
+.card {
+  padding: 3rem;
+
+  @include flex(1.5rem, column, space-around, flex-start);
+
+  &:nth-of-type(1) {
+    border-radius: 10px 10px 0 0;
+    @include mq(large) {
+      border-radius: 10px 0 0 10px;
+    }
+  }
+  &:nth-of-type(3) {
+    border-radius: 0 0 10px 10px;
+    @include mq(large) {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+
+  p {
+    max-width: 25ch;
+  }
+
+  button {
+    @include mq(large) {
+      margin-top: 4rem;
+    }
+  }
+}

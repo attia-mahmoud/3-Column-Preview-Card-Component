@@ -15,7 +15,7 @@
   --fs-600: 1.171875rem;
   --fs-700: 1.40625rem;
   --fs-800: 1.640625rem;
-  --fs-900: 1.875rem;
+  --fs-900: 2.34375rem;
 }
 @media only screen and (min-width: 992px) {
   :root {
@@ -27,7 +27,7 @@
     --fs-600: 1.171875rem;
     --fs-700: 1.40625rem;
     --fs-800: 1.640625rem;
-    --fs-900: 1.875rem;
+    --fs-900: 2.34375rem;
   }
 }
 
@@ -179,23 +179,23 @@ body {
 }
 
 .line-height-1 {
-  line-height: 3px;
+  line-height: 3;
 }
 
 .line-height-2 {
-  line-height: 2.5px;
+  line-height: 2.5;
 }
 
 .line-height-3 {
-  line-height: 2px;
+  line-height: 2;
 }
 
 .line-height-4 {
-  line-height: 1.5px;
+  line-height: 1.5;
 }
 
 .line-height-5 {
-  line-height: 1px;
+  line-height: 1;
 }
 
 .uppercase {
@@ -235,7 +235,7 @@ body {
 }
 
 .bg-primary-bright-orange {
-  color: hsl(31deg, 77%, 52%);
+  background-color: hsl(31deg, 77%, 52%);
 }
 
 .text-primary-dark-cyan {
@@ -243,7 +243,7 @@ body {
 }
 
 .bg-primary-dark-cyan {
-  color: hsl(184deg, 100%, 22%);
+  background-color: hsl(184deg, 100%, 22%);
 }
 
 .text-primary-very-dark-cyan {
@@ -251,7 +251,7 @@ body {
 }
 
 .bg-primary-very-dark-cyan {
-  color: hsl(179deg, 100%, 13%);
+  background-color: hsl(179deg, 100%, 13%);
 }
 
 .text-neutral-transparent-white {
@@ -259,7 +259,7 @@ body {
 }
 
 .bg-neutral-transparent-white {
-  color: hsla(0deg, 0%, 100%, 0.75);
+  background-color: hsla(0deg, 0%, 100%, 0.75);
 }
 
 .text-neutral-very-light-gray {
@@ -267,7 +267,7 @@ body {
 }
 
 .bg-neutral-very-light-gray {
-  color: hsl(0deg, 0%, 95%);
+  background-color: hsl(0deg, 0%, 95%);
 }
 
 .d-block {
@@ -284,6 +284,71 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.card {
+  padding: 3rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.card:nth-of-type(1) {
+  border-radius: 10px 10px 0 0;
+}
+@media only screen and (min-width: 992px) {
+  .card:nth-of-type(1) {
+    border-radius: 10px 0 0 10px;
+  }
+}
+.card:nth-of-type(3) {
+  border-radius: 0 0 10px 10px;
+}
+@media only screen and (min-width: 992px) {
+  .card:nth-of-type(3) {
+    border-radius: 0 10px 10px 0;
+  }
+}
+.card p {
+  max-width: 25ch;
+}
+@media only screen and (min-width: 992px) {
+  .card button {
+    margin-top: 4rem;
+  }
+}
+
+button {
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: transparent;
+  color: white;
+  outline: 2px solid white;
+}
+
+main {
+  margin-block: 6rem;
+  max-width: 100%;
+}
+main:first-child {
+  border-radius: 10px;
+}
+main:last-child {
+  border-bottom: 10px;
+}
+@media only screen and (min-width: 992px) {
+  main {
+    display: flex;
+    gap: 0rem;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: normal;
+  }
 }
 
 /*# sourceMappingURL=/main.d9ee62f6.css.map */
