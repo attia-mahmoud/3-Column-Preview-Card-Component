@@ -24,7 +24,7 @@
   height: 25rem;
   width: min(20rem, 40vw);
   z-index: -9999;
-  transition: all 300ms ease;
+  transition: all 500ms ease;
 
   @include mq(large) {
     left: 25%;
