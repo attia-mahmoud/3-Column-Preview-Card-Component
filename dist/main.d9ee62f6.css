@@ -5,6 +5,7 @@
   --clr-primary-bright-orange: hsl(31deg, 77%, 52%);
   --clr-primary-dark-cyan: hsl(184deg, 100%, 22%);
   --clr-primary-very-dark-cyan: hsl(179deg, 100%, 13%);
+  --clr-primary-off-black: rgb(9, 1, 40);
   --clr-neutral-transparent-white: hsla(0deg, 0%, 100%, 0.75);
   --clr-neutral-very-light-gray: hsl(0deg, 0%, 95%);
   --fs-100: 0.65625rem;
@@ -254,6 +255,14 @@ body {
   background-color: hsl(179deg, 100%, 13%);
 }
 
+.text-primary-off-black {
+  color: rgb(9, 1, 40);
+}
+
+.bg-primary-off-black {
+  background-color: rgb(9, 1, 40);
+}
+
 .text-neutral-transparent-white {
   color: hsla(0deg, 0%, 100%, 0.75);
 }
@@ -286,6 +295,90 @@ body {
   align-items: center;
 }
 
+.card__container {
+  position: relative;
+  margin-block: 5rem;
+  border-radius: 15px;
+}
+@media only screen and (min-width: 992px) {
+  .card__container {
+    margin-inline: 2rem;
+    cursor: pointer;
+  }
+}
+
+.background {
+  position: absolute;
+  border-radius: 6px;
+  width: 50%;
+  background-color: white;
+  top: -10%;
+  left: calc(-20vw + 100px);
+  height: 25rem;
+  width: min(20rem, 40vw);
+  z-index: -9999;
+  transition: all 300ms ease;
+  /* 
+  * Prevents issues when the parent creates a 
+  * stacking context. (For example, using the transform
+  * property )
+  */
+}
+@media only screen and (min-width: 992px) {
+  .background {
+    left: 25%;
+    height: 40rem;
+    width: 10rem;
+    transform: skew(15deg);
+  }
+}
+.background:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translate3d(20px, 6px, 0) scale(1.06);
+  filter: blur(30px);
+  opacity: var(0.66);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+.background::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.bg_sedan {
+  background-image: linear-gradient(to right bottom, #fd3a48, #ff553a, #ff6d2b, #ff8419, #fe9a00);
+}
+.bg_sedan:before {
+  background: linear-gradient(to bottom, #fd3a48 0%, #fe9a00 100%);
+}
+
+.bg_suv {
+  background-image: linear-gradient(to right bottom, #33d6d9, #00e1c9, #00e9a8, #00ef77, #51f12a);
+}
+.bg_suv:before {
+  background: linear-gradient(to bottom, #33d6d9 0%, #51f12a 100%);
+}
+
+.bg_luxury {
+  background-image: linear-gradient(to right bottom, #004241, #015c5c, #017679, #019298, #00afb9);
+}
+.bg_luxury:before {
+  background: linear-gradient(to bottom, #004241 0%, #00afb9 100%);
+}
+
 .card {
   padding: 3rem;
   display: flex;
@@ -293,42 +386,41 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-}
-.card:nth-of-type(1) {
-  border-radius: 10px 10px 0 0;
-}
-@media only screen and (min-width: 992px) {
-  .card:nth-of-type(1) {
-    border-radius: 10px 0 0 10px;
-  }
-}
-.card:nth-of-type(3) {
-  border-radius: 0 0 10px 10px;
-}
-@media only screen and (min-width: 992px) {
-  .card:nth-of-type(3) {
-    border-radius: 0 10px 10px 0;
-  }
+  background: rgba(5, 0, 32, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
 }
 .card p {
   max-width: 25ch;
 }
+.card img {
+  width: 7rem;
+  filter: brightness(0) saturate(100%) invert(98%) sepia(7%) saturate(618%) hue-rotate(225deg) brightness(119%) contrast(100%);
+}
 @media only screen and (min-width: 992px) {
-  .card button {
-    margin-top: 4rem;
+  .card:hover + .background {
+    width: 15rem;
+    transform: skew(0deg);
+    left: 15%;
   }
 }
 
 button {
-  padding: 0.75rem 2rem;
-  border-radius: 25px;
+  padding: 1rem 2rem;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
+  font-size: var(--fs-500);
 }
 button:hover {
   background-color: transparent;
   color: white;
   outline: 2px solid white;
+}
+@media only screen and (min-width: 992px) {
+  button {
+    margin-top: 4rem;
+  }
 }
 
 main {

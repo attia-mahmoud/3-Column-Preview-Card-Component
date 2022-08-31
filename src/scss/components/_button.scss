@@ -1,12 +1,19 @@
+@use "../abstracts/breakpoints" as *;
+
 button {
-  padding: 0.75rem 2rem;
-  border-radius: 25px;
+  padding: 1rem 2rem;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
+  font-size: var(--fs-500);
 
   &:hover {
     background-color: transparent;
     color: white;
     outline: 2px solid white;
+  }
+
+  @include mq(large) {
+    margin-top: 4rem;
   }
 }
